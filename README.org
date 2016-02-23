@@ -1,0 +1,7 @@
+* INSTALL
+
+#+BEGIN_SRC sh
+sudo npm install oizhaolei/oss-put-object -g
+export accessKeyId=00000;export secretAccessKey=111;export endpoint=http://oss-cn-333.aliyuncs.com;export Bucket=444
+oss_putobject /tmp/logo.png logo.png image/png
+#+END_SRC
