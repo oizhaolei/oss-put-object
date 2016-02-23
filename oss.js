@@ -1,8 +1,8 @@
 var config =      {
-      accessKeyId: "vS5XyoMoM30ZmRIA",
-      secretAccessKey: "WLh8RUvzzVrPEbQbGGPDPzjl7wt0fd",
-      endpoint: 'http://oss-cn-hangzhou.aliyuncs.com',
-      apiVersion: '2013-10-15'
+  accessKeyId: process.env.accessKeyId,
+  secretAccessKey: process.env.secretAccessKey,
+  endpoint: process.env.endpoint,
+  apiVersion: '2013-10-15'
 };
 var ALY = require('aliyun-sdk');
 var oss = new ALY.OSS(config);
@@ -19,7 +19,7 @@ putObject = function(source, dest, contentType, cb) {
     }
 
     oss.putObject({
-      Bucket: 'file2-tttalk-org',
+      Bucket: process.env.Bucket,
       Key: dest,
       Body: data,
       AccessControlAllowOrigin: '',
